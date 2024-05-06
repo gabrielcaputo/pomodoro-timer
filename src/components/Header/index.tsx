@@ -1,5 +1,19 @@
+import { Notebook , ClockCountdown } from "@phosphor-icons/react";
+import { HeaderContainer, HeaderLogo } from "./styles";
+import { NavLink } from "react-router-dom";
+
 export function Header() {
   return (
-    <>Header</>
+    <HeaderContainer>
+      <HeaderLogo />
+      <nav>
+        <NavLink to="/" title="Timer">
+          <ClockCountdown />
+        </NavLink>
+        <NavLink to="/history" title="Histórico">
+          <Notebook  />
+        </NavLink>
+      </nav>
+    </HeaderContainer>
   )
 }
