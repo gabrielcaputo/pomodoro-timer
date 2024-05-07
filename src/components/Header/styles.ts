@@ -41,7 +41,7 @@ export const HeaderContainer = styled.header`
 `
 
 export const HeaderLogo = styled(Timer)`
-  width: 40px;
-  height: 40px;
+  width: 3rem;
+  height: 3rem;
   color: ${props => props.theme['green-500']};
 `

@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export function Header() {
   return (
     <HeaderContainer>
-      <HeaderLogo />
+      <HeaderLogo weight="fill" />
       <nav>
         <NavLink to="/" title="Timer">
           <ClockCountdown />
