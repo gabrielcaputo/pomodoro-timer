@@ -145,3 +145,17 @@ export const Status = styled.span<StatusProps>`
     background: ${props => props.theme[STATUS_COLORS[props.$statusColor]]};
   }
 `
+
+export const NoHistory = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: ${props => props.theme['gray-700']};
+  margin-top: 2rem;
+  border-radius: 8px;
+  gap: 1rem;
+  color: ${props => props.theme['gray-500']};
+`
