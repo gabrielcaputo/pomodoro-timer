@@ -12,6 +12,10 @@ export const HomeContainer = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 3.5rem;
+
+    @media screen and (max-width: 768px) {
+      gap: 1.75rem;
+    }
   }
 `
 

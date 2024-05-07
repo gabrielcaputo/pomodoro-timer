@@ -10,6 +10,11 @@ export const FormContainer = styled.div`
   font-size: 1.125rem;
   font-weight: bold;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.875rem;
+    gap: 0.25rem;
+  }
 `
 
 const BaseInput = styled.input`
@@ -22,6 +27,10 @@ const BaseInput = styled.input`
   padding: 0 0.5rem;
   color: ${props => props.theme['gray-100']};
 
+  @media screen and (max-width: 768px) {
+    font-size: 0.875rem;
+  }  
+
   &::placeholder {
     color: ${props => props.theme['gray-500']};
   }
@@ -33,7 +42,16 @@ const BaseInput = styled.input`
 `
 
 export const TaskInput = styled(BaseInput)`
-  flex: 1;
+  width: 17rem;
+
+  @media screen and (max-width: 768px) {
+    width: 13.5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    text-align: center;
+  }
 
   &::-webkit-calendar-picker-indicator {
     display: none !important;
@@ -41,5 +59,6 @@ export const TaskInput = styled(BaseInput)`
 `
 
 export const MinutesAmountInput = styled(BaseInput)`
-  width: 4rem;
+  width: 3rem;
+  text-align: center;
 `

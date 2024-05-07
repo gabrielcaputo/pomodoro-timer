@@ -5,6 +5,11 @@ export const HistoryContainer = styled.main`
   padding: 3.5rem;
   display: flex;
   flex-direction: column;
+  height: 100%;
+
+  @media screen and (max-width: 960px) {
+    padding: 2.5rem 0;
+  }
 
   h1 {
     font-size: 1.5rem;
@@ -15,12 +20,17 @@ export const HistoryContainer = styled.main`
 export const HistoryList = styled.main`
   flex: 1;
   overflow: auto;
-  margin-top: 2rem;  
+  margin-top: 2rem;
+  height: 100%;
 
   table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px;
+
+    thead {
+      position: sticky;
+      top: 0;
+    }
 
     th {
       background-color: ${props => props.theme['gray-600']};
@@ -55,6 +65,58 @@ export const HistoryList = styled.main`
       
       &:last-child {
         padding-right: 1.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    table {
+      display: block;
+      width: 100%;
+      min-width: initial;
+      thead {
+        display: none;
+      }
+      tbody {
+        display: block;
+
+        tr {
+          display: block;
+          padding: 1rem;
+          border-radius: 8px;
+          background: ${props => props.theme['gray-700']};
+          margin-bottom: 1rem;
+          
+          &:nth-of-type(odd) {
+          }
+
+          td {
+            display: block;
+            width: 100% !important;
+            background: none;
+            padding: 0 !important;
+            border: 0 !important;
+
+            &:nth-child(1) {
+              &::before {
+                content: "Tarefa: ";
+                font-weight: bold;
+              }
+            }
+            &:nth-child(2) {
+              &::before {
+                content: "Duração: ";
+                font-weight: bold;
+              }
+            }
+            &:nth-child(3) {
+              &::before {
+                content: "Início: ";
+                font-weight: bold;
+              }
+            }
+          }
+        }
       }
     }
   }
